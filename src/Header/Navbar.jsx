@@ -14,14 +14,14 @@ function Navbar() {
           <button className='hover:bg-amber-600 rounded-tr-sm rounded-br-sm h-11 w-15 flex justify-center items-center bg-amber-700 border border-amber-600 border-l-0 cursor-pointer'><Search /></button>
         </div>
 
-        <ul className='w-100 h-20 flex justify-around items-center'>
-          <li><NavLink to='/' className={({ isActive }) => isActive ? 'text-amber-600 font-bold' : 'text-white'}>Home</NavLink></li>
+        <ul className='w-110 h-20 flex justify-around items-center'>
+          <li><NavLink to='/' className={({ isActive }) => isActive ? 'rounded-full font-semibold py-2 px-6 bg-amber-600 text-black' : 'text-white'}>Home</NavLink></li>
 
-          <li><NavLink to='/myItems' className={({ isActive }) => isActive ? 'text-amber-600 font-bold' : 'text-white'}>My Items</NavLink></li>
+          <li><NavLink to='/myItems' className={({ isActive }) => isActive ? 'rounded-full font-semibold py-2 px-6 bg-amber-600 text-black' : 'text-white'}>My Items</NavLink></li>
 
-          <li><NavLink to='/profile' className={({ isActive }) => isActive ? 'text-amber-600 font-bold' : 'text-white'}>Profile</NavLink></li>
+          <li><NavLink to='/profile' className={({ isActive }) => isActive ? 'rounded-full font-semibold py-2 px-6 bg-amber-600 text-black' : 'text-white'}>Profile</NavLink></li>
 
-          <li><NavLink to='/login' className={({ isActive }) => isActive ? 'text-amber-600 font-bold' : 'text-white'}>Log in</NavLink></li>
+          <li><NavLink to='/login' className={({ isActive }) => isActive ? 'rounded-full font-semibold py-2 px-6 bg-amber-600 text-black' : 'text-white'}>Log in</NavLink></li>
 
           <li><NavLink><Moon /></NavLink></li>
         </ul>
