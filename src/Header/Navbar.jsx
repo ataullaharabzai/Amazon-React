@@ -1,15 +1,25 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { AlignCenter, Moon, Search, Sun, } from 'react-feather'
+import { useLogin } from '../contexts/LoginContext'
 
 function Navbar() {
+
+  const { user } = useLogin()
+
   return (
     <>
       <div className='w-full h-17 m-0 bg-gray-900 text-white flex justify-around items-center'>
         <div className=''>
           <h1 className='text-3xl ml-5'>Amazon</h1>
         </div>
-        <div className='w-150 h-11 flex justify-between items-center '>
+        <div className='m-1 p-2 w-50'>
+          {user.firstName && user.lastName ?
+            <h1>Welcom <br /> {user.firstName} {user.lastName}</h1>
+            : ''
+          }
+        </div>
+        <div className='w-120 h-11 flex justify-between items-center '>
           <input type="text" placeholder='Search' className='w-full h-11 px-3 rounded-tl-sm rounded-bl-sm border border-amber-600 border-r-0 focus:outline-none' />
           <button className='hover:bg-amber-600 rounded-tr-sm rounded-br-sm h-11 w-15 flex justify-center items-center bg-amber-700 border border-amber-600 border-l-0 cursor-pointer'><Search /></button>
         </div>

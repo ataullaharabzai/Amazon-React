@@ -13,6 +13,7 @@ import makeup from './assets/makeup.jpg'
 import shoes from './assets/shoes.jpg'
 import smartWatch from './assets/smartWatch.jpg'
 import sofa from './assets/sofa.jpg'
+import { LoginProvider } from './contexts/LoginContext'
 
 const images = {
   'cloths.jpg': cloths,
@@ -27,7 +28,7 @@ const images = {
 
 function App() {
   const [cards, setCards] = useState(
-    CardData.map(item => ({...item, img: images[item.img]}))
+    CardData.map(item => ({ ...item, img: images[item.img] }))
   )
 
   const [myItem, setMyItem] = useState([])
@@ -45,11 +46,13 @@ function App() {
   }
 
   return (
-    <CardProvider value={{ cardItem: cards, addCard, deleteCard, buyItems, myItem }}>
-      <Navbar />
-      <Outlet />
-      <Footer />
-    </CardProvider>
+    <LoginProvider>
+      <CardProvider value={{ cardItem: cards, addCard, deleteCard, buyItems, myItem }}>
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </CardProvider>
+    </LoginProvider>
   )
 }
 
