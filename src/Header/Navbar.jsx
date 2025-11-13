@@ -11,9 +11,9 @@ function Navbar() {
     <>
       <div className='w-full h-17 m-0 bg-gray-900 text-white flex justify-around items-center'>
         <div className=''>
-          <h1 className='text-3xl ml-5'>Amazon</h1>
+          <h1 className='text-3xl ml-5 font-semibold'>Amazon</h1>
         </div>
-        <div className='m-1 p-2 w-40 ml-5'>
+        <div className='m-1 p-2 w-30 ml-5'>
           {user.country ?
             <div>
               <h1 className='text-gray-400 text-sm'>Delever to:</h1>
@@ -36,7 +36,7 @@ function Navbar() {
 
           <li><NavLink to='/login' className={({ isActive }) => isActive ? 'text-amber-600 font-semibold' : 'text-white'}>Log in</NavLink></li>
 
-          <li><NavLink><Moon /></NavLink></li>
+          {/* <li><NavLink><Moon /></NavLink></li> */}
         </ul>
       </div>
 
