@@ -14,6 +14,10 @@ function LoginForm() {
   const handleSubmit = (e) => {
     e.preventDefault()
     setUser({ firstName, lastName, email, country })
+    setFirstName('')
+    setLastName('')
+    setCountry('')
+    setEmail('')
   }
 
   return (
